@@ -1,5 +1,3 @@
-
-
 *{
     margin: 0;
     padding: 0;
@@ -18,7 +16,9 @@ body{
     border-radius: 8px;
     background-color:aliceblue;
     box-shadow: 0 0 10px rgba(0, 0, 0, .8);
+
 }
+
 
 .section{
     /* border: solid #414002; */
@@ -72,6 +72,7 @@ body{
     text-decoration: none;
     font-size: 1.1rem;
     margin : 3px 15px 3px 15px;
+    
 }
 
 .btns{
@@ -91,15 +92,20 @@ body{
     color: white;
     
     background: linear-gradient(135deg , #71b7e6 , #9b59b6);
+
 }
 
 button:hover{
     background: linear-gradient(-135deg , #71b7e6 , #9b59b6);
+
 }
 
 @media(max-width:900px){
     .main-container{
         margin: 5% 2% 5% 2%;
-        transition: all 0.8s;    
+        transition: all 0.8s;
+       
+        
+    
     }
 }
