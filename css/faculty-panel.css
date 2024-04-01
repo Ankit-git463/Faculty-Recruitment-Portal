@@ -1,79 +1,28 @@
 
-
-
-
-
-
-hr{
-    height: 1px;
-    border: 0;
-    background-color: rgb(107, 8, 107);
-    box-shadow: 0 0 10px rgba(0, 0, 150, 1.25);
-    size: 4px;
-
+*{
+    margin: 0;
+    padding: 0;
 }
 
-#fp-user-details{
-    width: 100%;
-    box-shadow: none;
-    background: aliceblue;
-}
-/* CSS for address box  */
-
-.partition{
-    
-    /* border: solid black; */
-    width: 100%;
-    display: flex;
-    
-
+.container-fluid{
+    background-color: #f7ffff;
+    margin-bottom: 10px;
 }
 
-.left-half{
-    /* border: solid red; */
-    text-align: center;
-    
-    
-}
-.right-half{
-    /* border: solid orange; */
-    text-align: center;
+.hindi-name {
+    text-align:center;
+    color:#414002!important;
+    font-weight: bold;
+    font-size: 2.3em; 
+    margin-top: 3px; 
+    font-family: 'Noto Sans', sans-serif;
 }
 
-.left-half span , .right-half span{
-    font-weight: 600;
-    margin-top: 10px ;
-    padding-left: 10px;
-    padding-right: 10px;
+.eng-name{
+    text-align:center;
+    color: #414002!important;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif!important;
+    font-size: 2.2em; 
+    margin-top: 0px;
 }
-
-textarea{
-    width: 90%;
-    height: 50px;
-    max-height: 190px;
-    padding: 2px 5px 2px 5px ;
-    margin-bottom: 3px;
-    resize: vertical;
-    outline: none;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    
-    
-    
-}
-
-textarea:focus,
-textarea:valid {
-    border-color:  #9b59b9;
-    
-
-}
-
-@media (max-width:700px) {
-    .partition{
-        flex-direction : column-reverse;
-    }
-    
-}
-
-/* --------------------------------------------------------- */

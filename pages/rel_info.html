@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Details</title>
+
+    <link rel="stylesheet" href="../css/acde.css">
+    <link rel="stylesheet" href="../samples/form-box.css">
+    <link rel="stylesheet" href="../samples/form-table.css">
+   
+    <!-- Include CKEditor from CDN -->
+    <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+    </head>
+    <body>
+    
+    <h2>Research Statement</h2>
+    
+    <form action="submit.php" method="post">
+        <label for="research_statement">Research Statement:</label><br>
+        <!-- Textarea will be replaced by CKEditor -->
+        <textarea id="research_statement" name="research_statement" rows="10" cols="50"></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    
+    <!-- Initialize CKEditor -->
+    <script>
+        // Replace the textarea with id "research_statement" with CKEditor
+        CKEDITOR.replace('research_statement');
+    </script>
+    
+    </body>
+    </html>
+    

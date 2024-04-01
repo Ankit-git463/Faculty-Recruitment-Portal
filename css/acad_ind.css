@@ -1,0 +1,23 @@
+.tbl-membership tr td input 
+{
+    width: 420px;
+}
+
+.tbl-awards tr td input 
+{
+    width: 280px;
+}
+
+@media(max-width:700px){
+    .tbl-membership tr td input 
+{
+    width: 220px;
+}
+
+.tbl-awards tr td input 
+{
+    width: 180px;
+}
+
+
+}

@@ -9,13 +9,13 @@
 
 }
 
-/* .section{
-    border: solid red; 
+.section{
+    /* border: solid red;  */
 }
 
 .tbl-panel{
-     border: solid green; 
-} */
+     /* border: solid green;  */
+}
 
 .tbl-panel-heading{
     text-align: center;
@@ -28,9 +28,7 @@
     /* border: solid orange; */
     overflow-x: scroll;
     padding: 15px 5px 15px 5px;
-    margin: 3px;
- 
-   
+    margin: 5px;  
 }
 
 .main-tbl{
