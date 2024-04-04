@@ -9,26 +9,29 @@
 
 }
 
-.section{
-    /* border: solid red;  */
+/* .section{
+    border: solid red; 
 }
 
 .tbl-panel{
-     /* border: solid green;  */
-}
+     border: solid green; 
+} */
 
 .tbl-panel-heading{
     text-align: center;
     /* border: solid green;  */
     font-weight: 650;
     padding: 15px 0px 3px 0px;
+    font-size: large;
     margin-bottom: 18px;
 }
 .tbl-panel-body {
     /* border: solid orange; */
     overflow-x: scroll;
     padding: 15px 5px 15px 5px;
-    margin: 5px;  
+    margin: 3px;
+ 
+   
 }
 
 .main-tbl{
@@ -59,24 +62,25 @@
     /* border:solid black; */
 }
 
-.input-box-tbl input,select{    
+.input-box-tbl input,select{ 
+
     outline: none;
     border-radius: 5px;
     margin-left: 3px;
     border: 1px solid #ccc;
     padding: 2px 5px 2px 10px;
-    width: 240px;
+    width: 50px;
     font-size: 15px; 
     border-bottom-width: 3px;   
 }
 
 .input-box-tbl input:focus,
 .input-box-tbl input:valid{
-    border-color: #9b59b9;
+    border-color: #0c0064;
 }
 select:focus,
 select:valid{
-    border-color: #9b59b9;
+    border-color: #0c0064;
 }
 
 .add-more{
@@ -92,4 +96,18 @@ select:valid{
 
 }
 
+
+@media(max-width:700px ){
+    .container{
+        max-width: 100%;
+    }
+    .input-box-tbl input,select{ 
+
+        border: 1px solid #ccc;
+        padding: 2px 5px 2px 10px;
+        width: 50px;
+          
+    }
+    
+}
   

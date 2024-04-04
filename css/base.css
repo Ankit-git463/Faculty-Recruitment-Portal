@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
 *{
@@ -27,21 +28,21 @@ body{
 .section h4{
     text-align: center;
     padding-top: 10px;
-    font-size: 1.3em;
+    font-size: 1.4em;
 }
 
 .hindi-name{
     text-align:center;
-    color:#414002!important;
+    color:#0c0064!important;
     font-weight: bold;
     font-size: 2.3rem; 
-    margin-top: 3px; 
+    margin-top: 25px; 
     font-family: 'Noto Sans', sans-serif;
 }
 
 .eng-name{
     text-align:center;
-    color: #414002!important;
+    color: #0c0064!important;
     font-weight: bold;
     font-family: 'Oswald', sans-serif!important;
     font-size: 2.3em; 
@@ -100,6 +101,6 @@ button:hover{
 @media(max-width:900px){
     .main-container{
         margin: 5% 2% 5% 2%;
-        transition: all 0.8s;    
+        transition: all 0.7s;    
     }
 }

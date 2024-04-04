@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Faculty Login</title>
+    <link rel="stylesheet" href="../css/registration.css">
+    <link rel="stylesheet" href="../css/base.css">
+
+</head>
+
+<body>
+
+    <div class="intstname">
+        <div style="margin-bottom:10px; ">
+            <div>
+
+
+                <h3 class="hindi-name">भारतीय प्रौद्योगिकी संस्थान पटना</h3>
+                <h3 class="eng-name">Indian Institute of Technology Patna</h3>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <div class="box-container">
+
+            <div class="">
+
+                <div class="left-col">
+                    <img src="../resources/IITP.png" id="login-logo">
+                    
+                </div>
+
+
+                <div class="right-col">
+
+                    <h3><strong><u>REGISTER HERE</u></strong></h3>
+
+
+                    <form id="reg-form" method="post" action="register.php">
+
+                        <div class="reg-input-bx">
+
+                        <div class="lgn-data">
+                            <input type="text" name="firstname" placeholder="First Name" required />
+                        </div>
+                        
+                        <div class="lgn-data">
+                            <input type="text" name="lastname" placeholder="Last Name"  required />
+                        </div>
+
+                        <div class="lgn-data">
+                            <select type="text" name="lastname" placeholder="Last Name"  required > 
+                                <option value disabled selected>Select</option>
+                                <option value="genral">GENERAL</option>
+                                <option value="obc">OBC</option>
+                                <option value="SC">SC</option>
+                                <option value="ST">ST</option>
+                                <option value="PWD">PWD</option>
+                                <option value="EWS">EWS</option>
+                            </select>
+                        </div>
+                        
+                        
+                        <div class="lgn-data">
+                            <input type="text" name="email" placeholder="Email"  required />
+                        </div>
+
+                        <div class="lgn-data">
+                            <input type="password" placeholder="Password" name="password" required>
+                        </div>
+                        <div class="lgn-data">
+                            <input type="password" placeholder="Confirm Password" name="confirm_password" required>
+                        </div>
+
+
+                        </div>
+                        
+
+                        <div class="btn-container">
+                            <div class="btns">
+                                <button type="button" name="submit" value="Submit">Register</button>
+                            </div>
+                            
+                        </div>
+
+
+                    </form>
+                    
+
+                    <p>
+                        <strong> Already Registered !! </strong> 
+                        <br >
+                        <a href='login.html' class="">LOGIN HERE </a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
