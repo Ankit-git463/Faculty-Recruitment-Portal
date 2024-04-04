@@ -1,11 +1,11 @@
 .tbl-membership tr td input 
 {
-    width: 420px;
+    width: 490px;
 }
 
 .tbl-awards tr td input 
 {
-    width: 280px;
+    width: 320px;
 }
 
 @media(max-width:700px){
