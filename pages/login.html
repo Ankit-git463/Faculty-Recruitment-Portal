@@ -55,7 +55,7 @@
 
                         <div class="btn-container">
                             <div class="btns">
-                                <button type="button" onclick="alert('Login functionality disabled for demo.')"
+                                <button type="button" id="lgn-btn"
                                     name="submit" value="Submit">Login</button>
                             </div>
                             <div class="btns">
@@ -79,6 +79,12 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById('lgn-btn').addEventListener('click', function() {
+            window.location.href = 'faculty-panel.html'; // Change 'another_page.html' to the URL of the desired page
+        });
+    </script>
 </body>
 
 </html>

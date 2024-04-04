@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academic Details</title>
 
-    <link rel="stylesheet" href="../css/acde.css">
+    <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../samples/form-box.css">
     <link rel="stylesheet" href="../samples/form-table.css">
 </head>
@@ -536,12 +536,26 @@
             </div>
 
             <div class="btns">
-                <button>Back</button>
-                <button>Save And Next</button>
+                <button id="backbtn">Back</button>
+                <button id="saveNextBtn">Save And Next</button>
             </div>
 
         </div>
 
+        <script>
+            document.getElementById('saveNextBtn').addEventListener('click', function() {
+                window.location.href = 'rel_info.html'; // Change 'another_page.html' to the URL of the desired page
+            });
+        </script>
+
+        <script>
+            document.getElementById('backbtn').addEventListener('click' , function() {
+                window.location.href = 'acad_ind.html';
+            })
+        </script>
+
+
+        </div>
 
 </body>
 
