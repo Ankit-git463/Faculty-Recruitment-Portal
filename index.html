@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Faculty Login</title>
+    <link rel="stylesheet" href="../css/login.css">
+
+</head>
+
+<body>
+
+    <div class="intstname">
+        <div style="margin-bottom:10px; ">
+            <div>
+
+
+                <h3 class="hindi-name">भारतीय प्रौद्योगिकी संस्थान पटना</h3>
+                <h3 class="eng-name">Indian Institute of Technology Patna</h3>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <div class="box-container">
+
+            <div class="">
+
+                <div class="left-col">
+                    <img src="../resources/IITP.png" id="login-logo">
+                    
+                </div>
+
+
+                <div class="right-col">
+
+                    <h3><strong><u>LOGIN HERE</u></strong></h3>
+
+
+                    <form role="form">
+
+                        <div class="lgn-data">
+                            <input type="text" name="email" placeholder="Your email" autofocus="" required />
+                        </div>
+                        
+
+                        <div class="lgn-data">
+                            
+                            <input type="password" placeholder="Enter your password" name="password" required>
+                        </div>
+                        
+
+                        <div class="btn-container">
+                            <div class="btns">
+                                <button type="button" id="lgn-btn"
+                                    name="submit" value="Submit">Login</button>
+                            </div>
+                            <div class="btns">
+                                <button type="button" class="cancelbtn pull-right"
+                                    onclick="alert('Password reset functionality disabled for demo');">Reset
+                                    Password</button>
+                            </div>
+                        </div>
+
+
+                    </form>
+                    
+
+                    <p>
+                        <strong> NOT REGISTERED? </strong> 
+                        <br >
+                        <a href='registration.html' class="">SIGN UP</a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('lgn-btn').addEventListener('click', function() {
+            window.location.href = 'faculty-panel.html'; // Change 'another_page.html' to the URL of the desired page
+        });
+    </script>
+</body>
+
+</html>
