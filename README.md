@@ -21,6 +21,8 @@ Faculty Recruitment Portal is a web application developed using HTML, CSS, JavaS
 3. **Database Integration**: Data is stored in MySQL database tables corresponding to each page, ensuring organized data management.
 
 4. **PDF Generation**: Utilizes DOMPDF for generating PDF documents, facilitating easy sharing and printing of important information.
+   
+5. **File Uploading**: Allows to upload files to the website. 
 
 
 
@@ -30,7 +32,7 @@ Faculty Recruitment Portal is a web application developed using HTML, CSS, JavaS
 1. Clone the repository:
 
     ```
-    [REPOSITORY](https://github.com/Ankit-git463/Faculty-Recruitment-Portal.git)
+    https://github.com/Ankit-git463/Faculty-Recruitment-Portal.git
 
     ```
 
