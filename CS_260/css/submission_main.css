@@ -1,0 +1,96 @@
+
+.upload {
+    padding: 5px 15px 5px 15px;
+    border: none;
+    font-weight: 600;
+    border-radius: 5px;
+    
+    margin-top: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    color: white;
+    
+    background: linear-gradient(135deg , #71b7e6 , #9b59b6);
+}
+
+.user-details2{
+    max-width: 90%;
+    /* border: solid blue; */
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 150, 0.25);
+    padding: 25px 30px;
+    border-radius: 8px;
+
+}
+
+.user-details2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0px 12px 0px ;
+}
+
+.user-details2 .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+
+}
+
+
+.user-details2 .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user-details2 .input-box input ,select{
+
+    width : 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    padding-top:2px ;
+    padding-bottom:2px ;
+    font-size: 15px; 
+    border-bottom-width: 3px;
+    
+}
+.user-details2 .input-box input:focus,
+.user-details2 .input-box input:valid{
+    border-color: #0c0064;
+}
+
+select:focus , select:valid{
+    border-color:#0c0064;
+}
+
+
+
+
+@media(max-width:700px ){
+    .container{
+        max-width: 100%;
+    }
+
+    .user-details2 .input-box{
+        margin-bottom: 15px;
+        width: 100% ; 
+    }
+
+    form .gender-details .category{
+        width: 100%;
+        transition: all 0.1s ease;
+        
+    }
+
+    .container form .user-details{
+       max-height: 300px;
+       overflow-y: scroll;
+    }
+
+    .user-details2::-webkit-scrollbar{
+        width: 10px;
+    }
+
+}

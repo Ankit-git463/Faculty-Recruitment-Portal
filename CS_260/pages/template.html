@@ -1,0 +1,1417 @@
+<html>
+
+<head>
+	<title></title>
+	<style type="text/css">
+		@page {
+			margin: 0.5in 0.5in 0.5in 0.5in;
+		}
+
+		.receipt {
+			margin: 0 auto 1in auto;
+			/*font-family:"verdana",monospace;*/
+			border: solid #000;
+			padding: 0 0.25in;
+			width: 10in;
+			min-height: 2.5in;
+			height: auto;
+			/*page-break-inside:avoid;
+	        page-break-before:auto;
+	        page-break-after:auto;*/
+			/*word-wrap: break-word;*/
+		}
+
+
+		.receipt div {
+			margin: 0;
+			margin-bottom: 0.1in;
+			padding: 0;
+			/*word-wrap: break-word;*/
+			/*background-color: green;*/
+
+
+		}
+
+		.receipt span {
+			display: inline-block;
+			line-height: 2;
+		}
+
+		.receipt p,
+		.receipt span {
+			margin: 0;
+			padding: 0;
+
+
+		}
+
+		.title {
+			font-family: Arial, sans-serif;
+			font-size: 1.5em;
+			color: #a40a0b;
+			font-weight: bold;
+			width: 100%;
+		}
+
+		.label {
+			font-weight: bold;
+			color: #a40a0b;
+			background-color: #f1f1d1;
+			margin-bottom: 10px !important;
+			padding-left: 5px !important;
+			padding-right: 5px !important;
+			border-radius: 5px;
+			font-size: 1.1em;
+		}
+
+		.date,
+		.payee,
+		.phone,
+		.signature {
+			border-bottom: solid thin #444;
+		}
+
+		.payee,
+		.signature {
+			width: 2in;
+		}
+
+		.phone,
+		.date {
+			width: 1.25in;
+		}
+
+		.amount,
+		.payer {
+			font-style: italic;
+			text-decoration: underline;
+		}
+
+		.tab {
+			border-collapse: collapse;
+			width: 100%;
+
+		}
+
+		.tab td {
+			border: 1px solid #CCC !important;
+			padding-left: 10px;
+
+			word-wrap: break-word !important;
+
+
+		}
+
+		.receipt_left {
+			float: left;
+			width: 5.5in;
+
+		}
+
+		.receipt_right {
+			float: right;
+			width: 1.5in;
+
+		}
+
+		.receipt_left1 {
+			float: left;
+			width: 4.5in;
+
+		}
+
+		.receipt_right1 {
+			float: right;
+			width: 4.5in;
+
+		}
+
+		.receipt_right img {
+			height: 1in;
+			width: 0.8in;
+			padding: 2px;
+			border: 1px solid #CCC;
+		}
+
+		.receipt_center {
+			width: auto;
+			height: 120px;
+
+		}
+
+		th {
+			text-align: left;
+		}
+
+		.tr_title {
+			color: #0a5398;
+		}
+	</style>
+</head>
+
+<body style="font-family:Arial,sans-serif;">
+
+	<div class="receipt">
+		<div class="receipt_center">
+			
+			<p style="text-align: center; font-size: 1.7em;"> <br />Indian Institute of
+				Technology Patna</p>
+			<br>
+			<p
+				style="text-align: center; margin-top: 10px; background-color: #175395; line-height: 25px; color: #FFF; font-weight: bold;">
+				Application for the Faculty Position</p>
+		</div>
+		<hr>
+
+
+		<div class="title">{{name}}</div>
+
+
+		<div class="receipt_left">
+			<p style="width:10in;">Advertisement Number : {{adv_num}}</p>
+			<p>Date of Application : {{date_app}}</p>
+			<p>Post Applied for : {{applied_post}}</p>
+			<p>Department : {{dept_school}}</p>
+			<p>Application Number : {{app_num}}</p>
+
+		</div>
+
+
+
+		
+
+
+		<div style="clear:both"></div>
+
+
+		<div>
+			<span class="label">1. Personal Details</span>
+			<br><br>
+			<table class="tab">
+				<tr style="background-color:#f1f1f1;">
+					<td><strong class="tr_title">First Name</strong></td>
+					<td><strong class="tr_title">Middle Name</strong></td>
+					<td><strong class="tr_title">Last Name</strong></td>
+				</tr>
+				<tr>
+					<td>{{first_name}}</td>
+					<td>{{middle_name}}</td>
+					<td>{{last_name}}</td>
+				</tr>
+			</table>
+
+
+			<br> <br>
+
+
+			<table class="tab">
+				<tr style="background-color:#f1f1f1;">
+					<td><strong class="tr_title">Date of Birth</strong></td>
+					<!-- <td><strong class="tr_title">Age</strong></td> -->
+					<td><strong class="tr_title">Gender</strong></td>
+					<td><strong class="tr_title">Marital Status</strong></td>
+					<td><strong class="tr_title">Category</strong></td>
+					<td><strong class="tr_title">Nationality</strong></td>
+					<td><strong class="tr_title">ID Proof</strong></td>
+
+				</tr>
+				<tr>
+					<td>{{dob}}</td>
+					<!-- <td></td> -->
+					<td>{{gender}}</td>
+					<td>{{mar_status}}</td>
+					<td>{{category}}</td>
+					<td>{{nationality}}</td>
+					<td>{{id_proof}}</td>
+				</tr>
+				<tr>
+					<td><strong>Father's Name</strong></td>
+					<td colspan="6">Abdullah Hakim</td>
+
+				</tr>
+			</table>
+
+
+			<br> <br>
+
+			<table class="tab">
+				<tr style="background-color:#f1f1f1;">
+					<td width="50%"><strong class="tr_title">Current Address </strong></td>
+					<td width="50%"><strong class="tr_title">Permanent Address </strong></td>
+
+				</tr>
+
+				<tr>
+					<td>{{corrs_street}}</td>
+					<td>{{perm_street}}</td>
+
+				</tr>
+				<tr>
+					<td>{{corrs_city}}</td>
+					<td>{{perm_city}}</td>
+
+				</tr>
+				<tr>
+					<td>{{corrs_state}}</td>
+					<td>{{perm_state}}</td>
+
+				</tr>
+				<tr>
+					<td>{{corrs_country}}</td>
+					<td>{{perm_country}}</td>
+
+				</tr>
+				<tr>
+					<td>{{corrs_pin}}</td>
+					<td>{{perm_pin}}</td>
+
+				</tr>
+			</table>
+
+
+			<br>
+
+			<span class="label"></span>
+			<table class="tab">
+				<tr>
+					<td colspan="2"><strong>Mobile & Email</strong></td>
+
+				</tr>
+				<tr>
+					<td style="background-color:#f1f1f1;">
+						<strong class="tr_title">Mobile</strong>
+					</td>
+					<td>{{mobile}}</td>
+				</tr>
+
+				<tr>
+					<td style="background-color:#f1f1f1;">
+						<strong class="tr_title">Alternate Mobile</strong>
+					</td>
+					<td>{{alt_mobile}}</td>
+				</tr>
+
+				<tr>
+					<td style="background-color:#f1f1f1;">
+						<strong class="tr_title">Landline Phone No.</strong>
+					</td>
+					<td>{{landline}}</td>
+				</tr>
+
+				<tr>
+					<td style="background-color:#f1f1f1;">
+						<strong class="tr_title">E-mail</strong>
+					</td>
+					<td>{{email}}</td>
+				</tr>
+
+				<tr>
+					<td style="background-color:#f1f1f1;">
+						<strong class="tr_title">Alternate E-mail</strong>
+					</td>
+					<td>{{alt_email}}</td>
+				</tr>
+
+
+			</table>
+			<br />
+
+			<span class="label">2. Educational Qualifications</span>
+			<table class="tab">
+
+				<tr style="background-color:#f1f1f1;">
+					<td colspan="6" class="tr_title"><strong>(A) Ph. D. Details</strong></td>
+				</tr>
+
+				<tr>
+					<td width="30%"><strong>University/<br />Institute</strong></td>
+					<td width="12%"><strong>Department</strong></td>
+					<td width="17%"><strong>Name of Ph. D. <br />Supervisor</strong></td>
+					<td width="10%"><strong>Year of <br />Joining</strong></td>
+					<td width="15%"><strong>Date of <br />successful <br />thesis Defence</strong></td>
+					<td width="15%"><strong>Date of <br />Award</strong></td>
+				</tr>
+
+				<tr>
+					<td>{{institute_2a}}</td>
+					<td>{{department_2a}}</td>
+					<td>{{supervisor_2a}}</td>
+					<td>{{yoj_phd_2a}}</td>
+					<td>{{date_thesis_2a}}</td>
+					<td>{{doa_phd_2a}}</td>
+
+
+				</tr>
+
+				<tr>
+					<td><strong>Title of Ph. D. Thesis</strong></td>
+					<td colspan="5">{{title_phd_2a}}</td>
+				</tr>
+
+			</table>
+			<br />
+
+			<table class="tab">
+
+				<tr style="background-color:#f1f1f1;">
+					<td colspan="8" class="tr_title"><strong>(B) Academic Details - PG</strong></td>
+				</tr>
+
+
+				<tr>
+					<td width="10%"><strong>Degree</strong></td>
+					<td width="25%"><strong>University/<br />Institute</strong></td>
+					<td width="10%"><strong>Year of <br />Joining</strong></td>
+					<td width="12%"><strong>Year of <br />Graduation</strong></td>
+					<td width="10%"><strong>Duration <br />(in years)</strong></td>
+					<td width="30%"><strong>Percentage/CGPA </strong></td>
+					<td width="30%"><strong>Division/Class </strong></td>
+
+
+
+				</tr>
+				<tr>
+					<td>{{degree_2b}}</td>
+					<td>{{branch_2b}}</td>
+					
+					<td>{{yoj_2b}}</td>
+					<td>{{yoc_2b}}</td>
+					<td>{{duration_2b}}</td>
+					<td>{{cgpa_2b}}</td>
+					<td>{{div_2b}}</td>
+
+
+				</tr>
+			</table>
+			<br />
+
+			<table class="tab">
+
+				<tr style="background-color:#f1f1f1;">
+					<td colspan="8" class="tr_title"><strong>(C) Academic Details - UG</strong></td>
+				</tr>
+
+				<tr>
+					<td width="10%"><strong>Degree</strong></td>
+					<td width="18%"><strong>University/<br />Institute</strong></td>
+					<td width="10%"><strong>Year of <br />Joining</strong></td>
+					<td width="10%"><strong>Year of <br />Graduation</strong></td>
+					<td width="10%"><strong>Duration <br />(in years)</strong></td>
+					<td width="30%"><strong>Percentage/CGPA </strong></td>
+					<td width="9%"><strong>Division/Class </strong></td>
+
+
+
+				</tr>
+				<tr>
+					<td>{{degree_2c}}</td>
+					<td>{{branch_2c}}</td>
+					<td>{{yoj_2c}}</td>
+					<td>{{yoc_2c}}</td>
+					<td>{{duration_2c}}</td>
+					<td>{{cgpa_2c}}</td>
+					<td>{{div_2c}}</td>
+
+
+				</tr>
+			</table>
+			<br />
+
+			<table class="tab">
+
+				<tr style="background-color:#f1f1f1;">
+					<td colspan="8" class="tr_title"><strong>(D) Academic Details - School</strong></td>
+				</tr>
+
+				<tr>
+					<td width="20%"><strong>10th/12th/HSC/Diploma</strong></td>
+					<td width="20%"><strong>School</strong></td>
+					<td width="20%"><strong>Year of Passing</strong></td>
+					<td width="19%"><strong>Percentage/CGPA</strong></td>
+					<td width="19%"><strong>Division/Class</strong></td>
+
+
+
+				</tr>
+				<tr>
+					<td>{{degree}}</td>
+					<td>{{school}}</td>
+					<td>{{yop}}</td>
+					<!-- <td></td> -->
+					<td>{{grade}}</td>
+					<td>{{divi}}</td>
+
+				</tr>
+				<tr>
+					<td>{{degree1}}</td>
+					<td>{{school1}}</td>
+					<td>{{yop1}}</td>
+					<!-- <td></td> -->
+					<td>{{grade1}}</td>
+					<td>{{divi1}}</td>
+
+				</tr>
+			</table>
+
+			
+			<br />
+
+
+			<table class="tab">
+				<tr style="background-color:#f1f1f1;">
+					<td colspan="8" class="tr_title"><strong>(E) Additional Educational Qualifications (If any)
+						</strong></td>
+				</tr>
+
+				<tr>
+					<td width="10%"><strong>Degree</strong></td>
+					<td width="25%"><strong>University/<br />Institute</strong></td>
+					<td width="20%"><strong>Subjects</strong></td>
+					<td width="10%"><strong>Year of <br />Joining</strong></td>
+					<td width="12%"><strong>Year of <br />Graduation</strong></td>
+					<td width="10%"><strong>Duration <br />(in years)</strong></td>
+					<td width="30%"><strong>Percentage/CGPA </strong></td>
+					<td width="30%"><strong>Division/Class </strong></td>
+				</tr>
+				<tr>
+					<td>45211 Hage</td>
+					<td>64534 Marks Canyon</td>
+					<td>104 Gladyce Ridge</td>
+					<td>9745 </td>
+					<td>181 M</td>
+					<td>5578</td>
+					<td>2794 </td>
+					<td>Expli</td>
+				</tr>
+				<tr>
+					<td>501 Abdul </td>
+					<td>461 Alexys Unions</td>
+					<td>5755 Von Wall</td>
+					<td>44516</td>
+					<td>6202 </td>
+					<td>1117</td>
+					<td>2094 </td>
+					<td>Assum</td>
+				</tr>
+				
+				<tr>
+					<td>36345 Beth</td>
+					<td>5054 Marvin-Hane Well</td>
+					<td>28619 Vada Neck</td>
+					<td>782 N</td>
+					<td>8219 </td>
+					<td>2245</td>
+					<td>942 H</td>
+					<td>Dolor</td>
+				</tr>
+				
+			</table>
+			<br />
+
+			<span class="label">3. Employment Details </span>
+
+			<table class="tab">
+
+				<tr style="background-color:#f1f1f1;">
+					<td colspan="5" class="tr_title"><strong>(A) Present Employment</strong></td>
+				</tr>
+
+
+				<tr>
+					<td width="20"><strong>Position </strong></td>
+					<td width="30"><strong>Organization/Institution</strong></td>
+					<td width="15"><strong>Date of <br />Joining</strong></td>
+					<td width="15"><strong>Date of <br />Leaving </strong></td>
+					<td width="15"><strong>Duration <br />(in years)</strong></td>
+				</tr>
+				<tr>
+					<td>{{position}}</td>
+					<td>{{organisation_3a}}</td>
+					<td>{{doj}}</td>
+					<td>{{dol}}</td>
+					<td>{{duration}}</td>
+				</tr>
+			</table>
+			<br />
+
+			<span class="label"> </span>
+			<table class="tab">
+				<tr style="background-color:#f1f1f1;">
+					<td colspan="5" class="tr_title"><strong>(B) Employment History (After PhD )</strong></td>
+				</tr>
+
+				<tr>
+					<td width="20"><strong>Position </strong></td>
+					<td width="30"><strong>Organization/Institution</strong></td>
+					<td width="15"><strong>Date of <br />Joining</strong></td>
+					<td width="15"><strong>Date of <br />Leaving </strong></td>
+					<td width="15"><strong>Duration <br />(in years)</strong></td>
+				</tr>
+				<tr>
+					<td>{{position_3b1}}</td>
+					<td>{{organisation1}}</td>
+					<td>{{doj_3b1}}</td>
+					<td>{{dol_3b1}}</td>
+					<td>{{duration_3b1}}</td>
+				</tr>
+				<tr>
+					<td>{{position_3b2}}</td>
+					<td>{{organisation2}}</td>
+					<td>{{doj_3b2}}</td>
+					<td>{{dol_3b2}}</td>
+					<td>{{duration_3b2}}</td>
+				</tr>
+
+				<tr>
+				<tr>
+					<td colspan="5">Experience : Minimum 6 years’ experience of which at least 3 years should be at the
+						level of Assistant Professor Grade I/Senior Scientific Officer/Senior Design Engineer. <strong
+							style="color:red;">Yes</strong></td>
+				</tr>
+
+
+				</tr>
+			</table>
+			<br />
+
+			<table class="tab">
+				<tr style="background-color:#f1f1f1;">
+					<td colspan="8" class="tr_title"><strong>(C) Teaching Experience (After PhD)</strong></td>
+				</tr>
+
+				<tr>
+					<!-- <td><strong>S. No.</strong></td> -->
+					<td width="25%"><strong>Position</strong></td>
+					<td width="30%"><strong>Employer</strong></td>
+					<td width="30%"><strong>Course Taught</strong></td>
+					<td width="30%"><strong>UG/PG</strong></td>
+					<td width="30%"><strong>No. of Students</strong></td>
+					<td width="10%"><strong>Date of <br />Joining</strong></td>
+					<td width="10%"><strong>Date of <br />Leaving</strong></td>
+					<td width="10%"><strong>Duration</strong></td>
+				</tr>
+				<tr>
+					<!-- <td></td> -->
+					<td>{{position_3c1}}</td>
+					<td>{{employer1}}</td>
+					<td>{{course_taught1}}</td>
+					<td>{{UG_PG1}}</td>
+					<td>{{no_of_students1}}</td>
+					<td>{{doj_3c1}}</td>
+					<td>{{dol_3c1}}</td>
+					<td>{{duration_3c1}}</td>
+					
+				</tr>
+				<tr>
+					<!-- <td></td> -->
+					<td>{{position_3c2}}</td>
+					<td>{{employer2}}</td>
+					<td>{{course_taught2}}</td>
+					<td>{{UG_PG2}}</td>
+					<td>{{no_of_students2}}</td>
+					<td>{{doj_3c2}}</td>
+					<td>{{dol_3c2}}</td>
+					<td>{{duration_3c2}}</td>
+					
+				</tr>
+				
+
+			</table>
+			<br />
+
+			<table class="tab">
+				<tr style="background-color:#f1f1f1">
+					<td colspan="6" class="tr_title"><strong>(D) Research Experience </strong></td>
+				</tr>
+
+				<tr>
+					<!-- <td><strong>S. No.</strong></td> -->
+					<td width="20%"><strong>Position</strong></td>
+					<td width="20%"><strong>Institute</strong></td>
+					<td width="20%"><strong>Supervisor</strong></td>
+					<td width="10%"><strong>Date of <br />Joining</strong></td>
+					<td width="10%"><strong>Date of <br />Leaving</strong></td>
+					<td width="10%"><strong>Duration</strong></td>
+				</tr>
+				<tr>
+					<!-- <td></td> -->
+					<td>{{position_3d1}}</td>
+					<td>{{institute1}}</td>
+					<td>{{supervisor1}}</td>
+					<td>{{doj_3d1}}</td>
+					<td>{{dol_3d1}}</td>
+					<td>{{duration_3d1}}</td>
+				</tr>
+				<tr>
+					<!-- <td></td> -->
+					<td>{{position_3d2}}</td>
+					<td>{{institute2}}</td>
+					<td>{{supervisor2}}</td>
+					<td>{{doj_3d2}}</td>
+					<td>{{dol_3d2}}</td>
+					<td>{{duration_3d2}}</td>
+				</tr>
+				
+			</table>
+			<br />
+
+			<table class="tab">
+				<tr style="background-color:#f1f1f1">
+					<td colspan="5"><strong class="tr_title">(E) Industrial Experience </strong></td>
+				</tr>
+
+				<tr>
+					<!-- <td><strong>S. No.</strong></td> -->
+					<td width="20%"><strong>Organization</strong></td>
+					<td width="20%"><strong>Work Profile</strong></td>
+					<td width="10%"><strong>Date of <br />Joining</strong></td>
+					<td width="10%"><strong>Date of <br />Leaving</strong></td>
+					<td width="10%"><strong>Duration</strong></td>
+				</tr>
+				<tr>
+					<!-- <td></td> -->
+					<td>{{organisation_3e1}}</td>
+					<td>{{work_profile1}}</td>
+					<td>{{doj_3e1}}</td>
+					<td>{{dol_3e1}}</td>
+					<td>{{duration_3e1}}</td>
+				</tr>
+				<tr>
+					<!-- <td></td> -->
+					<td>{{organisation_3e2}}</td>
+					<td>{{work_profile2}}</td>
+					<td>{{doj_3e2}}</td>
+					<td>{{dol_3e2}}</td>
+					<td>{{duration_3e2}}</td>
+				</tr>
+				
+			</table>
+			<br />
+
+
+			
+
+			<span class="label">4. Area(s) of Specialization and Current Area(s) of Research</span>
+			<table class="tab">
+				<!-- <tr style="background-color:#f1f1f1"> 
+				<td><strong class="tr_title">4. Area(s) of Specialization & Current Area(s) of Research</strong></td>
+			</tr> -->
+				<tr>
+					<td width="25%" style="background-color: #f1f1f1;"><strong class="tr_title">Area(s) of
+							Specialization</strong></td>
+					<td>Artificial Neural Networks</td>
+				</tr>
+
+				<tr>
+					<td width="25%" style="background-color: #f1f1f1;"><strong class="tr_title">Current Area(s) of
+							Research</strong></td>
+					<td>Graphs and Network Algorithms</td>
+				</tr>
+
+
+			</table>
+			<br />
+
+
+			<span class="label">5. Summary of Publications</span>
+			<table class="tab">
+
+
+
+				<tr>
+					<td width="50%"><strong>Number of International Journal Papers </strong></td>
+					<td>{{in_jo}}</td>
+				</tr>
+
+				<tr>
+					<td width="50%"><strong>Number of National Journal Papers </strong></td>
+					<td>{{na_jo}}</td>
+				</tr>
+
+				<tr>
+					<td><strong> Number of International Conference Papers </strong></td>
+					<td>{{na_co}}</td>
+				</tr>
+
+				<tr>
+					<td><strong> Number of National Conference Papers </strong></td>
+					<td>{{in_co}}</td>
+				</tr>
+
+				<tr>
+					<td><strong> Number of Patent(s) </strong></td>
+					<td>{{nop}}</td>
+				</tr>
+
+				<tr>
+					<td><strong> Number of Book(s) </strong></td>
+					<td>{{nob}}</td>
+				</tr>
+
+				<tr>
+					<td><strong>Number of Book Chapter(s) </strong></td>
+					<td>{{nobc}}</td>
+				</tr>
+
+
+			</table>
+			<br />
+
+
+			<span class="label">6. List of 10 Best Research Publications (Journal/Conference)</span>
+			<table class="tab">
+				<tr style="background-color:#f1f1f1;">
+					<td colspan="8"><strong class="tr_title">(A) Journals(s)</strong></td>
+				</tr>
+				<tr>
+					<td width="5%"><strong>S. No.</strong></td>
+					<td width="25%"><strong>Author(s) </strong></td>
+					<td width="30%"><strong>Title</strong></td>
+					<td width="25%"><strong>Name of Journal</strong></td>
+					<td width="10%"><strong>Year, Vol., Page</strong></td>
+					<td width="5%"><strong>Impact Factor</strong></td>
+					
+					
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>{{author}}</td>
+					<td>{{title}}</td>
+					<td>{{na_of_jo}}</td>
+					<td>{{yvp}}</td>
+					<td>{{impact}}</td>
+					
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>{{author}}</td>
+					<td>{{title}}</td>
+					<td>{{na_of_jo}}</td>
+					<td>{{yvp}}</td>
+					<td>{{impact}}</td>
+					
+					
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>{{author}}</td>
+					<td>{{title}}</td>
+					<td>{{na_of_jo}}</td>
+					<td>{{yvp}}</td>
+					<td>{{impact}}</td>
+					
+					
+				</tr>
+				
+			</table>
+			<br />
+
+			
+
+			<span class="label">7. List of Patent(s), Book(s), Book Chapter(s)</span>
+			<table class="tab">
+				<tr style="background-color:#f1f1f1;">
+					<td colspan="8"><strong class="tr_title">(A) Patent(s)</strong></td>
+				</tr>
+				<tr>
+					<td width="5%"><strong>S. No.</strong></td>
+					<td width="20%"><strong>Inventor(s) </strong></td>
+					<td width="20%"><strong>Title of Patent</strong></td>
+					<td width="15%"><strong>Country of<br /> Patent</strong></td>
+					<td width="10%"><strong>Patent <br />Number</strong></td>
+					<td width="10%"><strong>Date of <br />Filing</strong></td>
+					<td width="10%"><strong>Date of <br />Published</strong></td>
+					<td width="10%"><strong>Status<br />Filed/Published</strong></td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>{{inventor}}</td>
+					<td>{{title_a}}</td>
+					<td>{{cop}}</td>
+					<td>{{pon}}</td>
+					<td>{{dof}}</td>
+					<td>{{dop}}</td>
+					<td>{{status_}}</td>
+					
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>{{inventor}}</td>
+					<td>{{title_a}}</td>
+					<td>{{cop}}</td>
+					<td>{{pon}}</td>
+					<td>{{dof}}</td>
+					<td>{{dop}}</td>
+					<td>{{status_}}</td>
+					
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>{{inventor}}</td>
+					<td>{{title_a}}</td>
+					<td>{{cop}}</td>
+					<td>{{pon}}</td>
+					<td>{{dof}}</td>
+					<td>{{dop}}</td>
+					<td>{{status_}}</td>
+					
+				</tr>
+			</table>
+			<br />
+
+			<table class="tab">
+				<tr style="background-color:#f1f1f1;">
+					<td colspan="5"><strong class="tr_title">(B) Book(s)</strong></td>
+				</tr>
+				<tr>
+					<td width="5%"><strong>S. No.</strong></td>
+					<td width="30%"><strong>Author(s) </strong></td>
+					<td width="40%"><strong>Title of the Book</strong></td>
+					<td width="20%"><strong>Year of Publication</strong></td>
+					<td width="10%"><strong>ISBN</strong></td>
+
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>{{author_b}}</td>
+					<td>{{title_b}}</td>
+					<td>{{year_b}}</td>
+					<td>{{isbn_b}}</td>
+					
+
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>{{author_b}}</td>
+					<td>{{title_b}}</td>
+					<td>{{year_b}}</td>
+					<td>{{isbn_b}}</td>
+					
+
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>{{author_b}}</td>
+					<td>{{title_b}}</td>
+					<td>{{year_b}}</td>
+					<td>{{isbn_b}}</td>
+					
+
+				</tr>
+			</table>
+			<br />
+
+			<table class="tab">
+				<tr style="background-color:#f1f1f1;">
+					<td colspan="5"><strong class="tr_title">(C) Book Chapter(s)</strong></td>
+				</tr>
+				<tr>
+					<td width="5%"><strong>S. No.</strong></td>
+					<td width="30%"><strong>Author(s) </strong></td>
+					<td width="40%"><strong>Title of the Book Chapter</strong></td>
+					<td width="20%"><strong>Year of Publication</strong></td>
+					<td width="10%"><strong>ISBN</strong></td>
+
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>{{author_c}}</td>
+					<td>{{title_c}}</td>
+					<td>{{year_c}}</td>
+					<td>{{isbn_c}}</td>
+					
+
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>{{author_c}}</td>
+					<td>{{title_c}}</td>
+					<td>{{year_c}}</td>
+					<td>{{isbn_c}}</td>
+					
+
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>{{author_c}}</td>
+					<td>{{title_c}}</td>
+					<td>{{year_c}}</td>
+					<td>{{isbn_c}}</td>
+					
+
+				</tr>
+			</table>
+			<br />
+
+			<span class="label">8. Google Scholar Link </span>
+			<table class="tab">
+				<tr style="background-color:#f1f1f1;">
+					<td colspan="6"><strong class="tr_title">URL</strong></td>
+				</tr>
+				<tr>
+					<td width="80%"><a
+							href="www.google.com"
+							target="_blank">www.github.io-abh463.co.in</a></td>
+				</tr>
+
+			</table>
+			<br />
+
+			<span class="label">9. Membership of Professional Societies </span>
+			<table class="tab">
+				<tr style="background-color:#f1f1f1;">
+					<td colspan="3"><strong class="tr_title">Details</strong></td>
+				</tr>
+
+				<tr>
+					<td width="3%"><strong>S. No.</strong></td>
+					<td width="20%"><strong>Name of the Professional Society</strong></td>
+					<td width="20%"><strong>Membership Status (Lifetime/Annual)</strong></td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Indian Society of Engineers</td>
+					<td>Lifetime</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Association of Indian Architects</td>
+					<td>Annual</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Indian Medical Association</td>
+					<td>Annual</td>
+				</tr>
+				
+
+				
+				
+			</table>
+			<br />
+			<br>
+
+			<span class="label">10. Professional Training </span>
+			<table class="tab">
+				<tr style="background-color:#f1f1f1;">
+					<td colspan="5"><strong class="tr_title">Details</strong></td>
+				</tr>
+
+				<tr>
+					<td width="5%"><strong>S. No.</strong></td>
+					<td width="20%"><strong>Type of Training Received</strong></td>
+					<td width="20%"><strong>Organisation</strong></td>
+					<td width="10%"><strong>Year</strong></td>
+					<td width="10%"><strong>Duration</strong></td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Advanced Data Analytics</td>
+					<td>Tata Consultancy Services</td>
+					<td>2018</td>
+					<td>6 months</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Machine Learning Workshop</td>
+					<td>Indian Institute of Technology</td>
+					<td>2019</td>
+					<td>1 week</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Cloud Computing Certification</td>
+					<td>Infosys</td>
+					<td>2020</td>
+					<td>3 months</td>
+				</tr>
+			</table>
+			<br />
+
+			<span class="label">11. Award(s) and Recognition(s) </span>
+			<table class="tab">
+				<tr style="background-color:#f1f1f1;">
+					<td colspan="4"><strong class="tr_title">Details</strong></td>
+				</tr>
+
+				<tr>
+					<td width="5%"><strong>S. No.</strong></td>
+					<td width="20%"><strong>Name of Award</strong></td>
+					<td width="20%"><strong>Awarded By</strong></td>
+					<td width="10%"><strong>Year</strong></td>
+				</tr>
+			</table>
+			<br />
+
+			<span class="label">12. Research Supervision</span>
+			<table class="tab">
+				<tr style="background-color:#f1f1f1;">
+					<td colspan="6"><strong class="tr_title">(A) PhD Thesis Supervision</strong></td>
+				</tr>
+				
+			</table>
+			<br />
+
+			<table class="tab">
+				<tr style="background-color:#f1f1f1;">
+					<td colspan="6"><strong class="tr_title">(B) M.Tech/M.E./Master's Thesis Supervision</strong></td>
+				</tr>
+
+				
+				<tr>
+					<td width="5%"><strong>S. No.</strong></td>
+					<td width="25%"><strong>Name of Student/Research Scholar</strong></td>
+					<td width="30%"><strong>Title of Thesis</strong></td>
+					<td width="10%"><strong>Role</strong></td>
+					<td width="10%"><strong>Ongoing/Completed</strong></td>
+					<td width="10%"><strong>Ongoing Since/ Year of Completion</strong></td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Rahul Kumar</td>
+					<td>Analysis of Data Structures</td>
+					<td>Co-Supervisor</td>
+					<td>Completed</td>
+					<td>2013</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Priya Patel</td>
+					<td>Optimization Techniques in Machine Learning</td>
+					<td>Co-Supervisor</td>
+					<td>Completed</td>
+					<td>1991</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Amit Sharma</td>
+					<td>Development of Algorithms for Image Processing</td>
+					<td>Supervisor with Co-supervisor</td>
+					<td>Completed</td>
+					<td>1981</td>
+				</tr>
+			</table>
+			<br />
+
+			<table class="tab">
+				<tr style="background-color:#f1f1f1;">
+					<td colspan="6"><strong class="tr_title">(C) B.Tech/B.E./Bachelor's Project Supervision</strong>
+					</td>
+				</tr>
+
+				
+					<tr>
+						<td width="15%"><strong>S. No.</strong></td>
+						<td width="25%"><strong>Name of Student</strong></td>
+						<td width="30%"><strong>Title of Project</strong></td>
+						<td width="10%"><strong>Role</strong></td>
+						<td width="10%"><strong>Ongoing/Completed</strong></td>
+						<td width="10%"><strong>Ongoing Since/ Year of Completion</strong></td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>Amit Sharma</td>
+						<td>Analysis of Economic Policies</td>
+						<td>Supervisor with Co-supervisor</td>
+						<td>Ongoing</td>
+						<td>---</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Rajesh Patel</td>
+						<td>Impact of Climate Change on Agriculture</td>
+						<td>Co-Supervisor</td>
+						<td>Completed</td>
+						<td>2010</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Deepika Singh</td>
+						<td>Urbanization and its Effects on Environment</td>
+						<td>Supervisor with Co-supervisor</td>
+						<td>Completed</td>
+						<td>2015</td>
+					</tr>
+					
+				
+				
+
+			</table>
+			<br />
+
+			<span class="label">13. Sponsored Projects/ Consultancy Details </span>
+			<table class="tab">
+				<tr style="background-color:#f1f1f1;">
+					<td colspan="7"><strong class="tr_title">(A) Sponsored Projects</strong></td>
+				</tr>
+				<tr>
+					<td width="5%"><strong>S. No.</strong></td>
+					<td width="20%"><strong>Sponsoring Agency</strong></td>
+					<td width="20%"><strong>Title of Project</strong></td>
+					<td width="10%"><strong>Sanctioned Amount</strong></td>
+					<td width="10%"><strong>Period</strong></td>
+					<td width="10%"><strong>Role</strong></td>
+					<td width="10%"><strong>Status</strong></td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Indian Council of Agricultural Research</td>
+					<td>Enhancing Crop Yield through Genetic Modification</td>
+					<td>₹50,00,000</td>
+					<td>2 years</td>
+					<td>Co-investigator</td>
+					<td>Ongoing</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Department of Science and Technology</td>
+					<td>Development of Sustainable Energy Solutions</td>
+					<td>₹1,00,00,000</td>
+					<td>3 years</td>
+					<td>Principal Investigator</td>
+					<td>Completed</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Indian Space Research Organisation</td>
+					<td>Remote Sensing for Natural Resource Management</td>
+					<td>₹75,00,000</td>
+					<td>4 years</td>
+					<td>Principal Investigator</td>
+					<td>Ongoing</td>
+				</tr>
+				
+			</table>
+			<br />
+
+
+			<table class="tab">
+				<tr style="background-color:#f1f1f1;">
+					<td colspan="7"><strong class="tr_title">(B) Consultancy Projects</strong></td>
+				</tr>
+
+				<tr>
+					<td width="5%"><strong>S. No.</strong></td>
+					<td width="20%"><strong>Organization</strong></td>
+					<td width="20%"><strong>Title of Project</strong></td>
+					<td width="15%"><strong>Amount of Grant</strong></td>
+					<td width="15%"><strong>Period</strong></td>
+					<td width="15%"><strong>Role</strong></td>
+					<td width="15%"><strong>Status</strong></td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Indian Institute of Technology</td>
+					<td>Development of Smart City Solutions</td>
+					<td>₹2,00,00,000</td>
+					<td>3 years</td>
+					<td>Principal Investigator</td>
+					<td>Ongoing</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Department of Biotechnology</td>
+					<td>Research on Bioremediation Techniques</td>
+					<td>₹1,50,00,000</td>
+					<td>2 years</td>
+					<td>Co-investigator</td>
+					<td>Completed</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Indian Council of Medical Research</td>
+					<td>Study on Vaccine Efficacy</td>
+					<td>₹1,75,00,000</td>
+					<td>4 years</td>
+					<td>Principal Investigator</td>
+					<td>Ongoing</td>
+				</tr>
+				
+				
+			</table>
+			<br />
+
+
+			<span class="label">14. Significant research contribution and future plans</span>
+			<table class="tab">
+				<tr>
+					<td style="text-align:justify;">
+						<p>As a researcher in Computer Science and Engineering, my significant research contribution lies in the development of a novel algorithm for optimizing resource allocation in cloud computing environments. Through extensive experimentation and analysis, I have demonstrated that this algorithm significantly improves the efficiency and performance of cloud-based applications, leading to reduced costs and enhanced scalability for businesses and organizations.</p>
+					</td>
+				</tr>
+
+			</table>
+			<br />
+
+			<span class="label">15. Significant teaching contribution and future plans</span>
+
+			<table class="tab">
+
+				<tr>
+					<td style="text-align:justify;"> Moving forward, my future research plans revolve around exploring the intersection of artificial intelligence and cybersecurity. I aim to develop advanced machine learning techniques to detect and mitigate emerging cyber threats, such as malware and phishing attacks. By leveraging cutting-edge methodologies and collaborating with cybersecurity experts, I aspire to develop robust and proactive solutions that safeguard sensitive data and infrastructure from cyber-attacks.</td>
+				</tr>
+			</table>
+			<br />
+
+			<span class="label">16. Any other relevant information</span>
+
+			<table class="tab">
+				<tr>
+					<td>
+						<p>It begins with a comprehensive assessment of current faculty needs and future requirements, informed by factors like program expansion and student demographics. Job descriptions are meticulously crafted, outlining the responsibilities, qualifications, and expectations for the position. These descriptions serve as the blueprint for attracting qualified candidates through extensive advertising across various platforms. Applications are rigorously reviewed by selection committees, who assess candidates based on academic qualifications, teaching experience, and research achievements. Shortlisted candidates undergo a rigorous interview process, including teaching demonstrations and research presentations, to evaluate their suitability for the role. Offers are extended to the most promising candidates, followed by negotiations and formal acceptance.</p>
+					</td>
+				</tr>
+			</table>
+			<br />
+
+			<span class="label">17. Professional Service as Reviewer/Editor etc.</span>
+			<table class="tab">
+				<tr>
+					<td>Once onboard, new faculty members undergo orientation programs to acclimate them to institutional policies and resources. Ongoing professional development opportunities further support their integration into the academic community, fostering a culture of collaboration and excellence.</td>
+				</tr>
+			</table>
+			<br />
+
+			<span class="label">18. Detailed List of Journal Publications<br />(Including Sr. No., Author's Names, Paper
+				Title, Volume, Issue, Year, Page Nos., Impact Factor (if any), DOI, Status [Published/Accepted])</span>
+			<table class="tab">
+				<tr>
+					<td>
+						<hr>
+						<hr>
+						<ol>
+							<li>
+								<p>He couldn&#39;t remember exactly where he had read it, but he was sure that he had.
+									The fact that she didn&#39;t believe him was quite frustrating as he began to search
+									the Internet to find the article. It wasn&#39;t as if it was something that seemed
+									impossible. Yet she insisted on always seeing the source whenever he stated a fact.
+								</p>
+							</li>
+							<li>
+								<p>He stared out the window at the snowy field. He&#39;d been stuck in the house for
+									close to a month and his only view of the outside world was through the window.
+									There wasn&#39;t much to see. It was mostly just the field with an occasional bird
+									or small animal who ventured into the field. As he continued to stare out the
+									window, he wondered how much longer he&#39;d be shackled to the steel bar inside the
+									house.</p>
+							</li>
+							<li>
+								<p>There was no ring on his finger. That was a good sign although far from proof that he
+									was available. Still, it was much better than if he had been wearing a wedding ring
+									on his hand. She glanced at his hand a bit more intently to see if there were any
+									tan lines where a ring may have been, and he&#39;s simply taken it off. She
+									couldn&#39;t detect any which was also a good sign and a relief. The next step would
+									be to get access to his wallet to see if there were any family photos in it.</p>
+							</li>
+						</ol>
+					</td>
+				</tr>
+			</table>
+			<br />
+
+			<span class="label">19. Detailed List of Conference Publications<br />(Including Sr. No., Author's Names,
+				Paper Title, Name of the conference, Year, Page Nos., DOI [If any])</span>
+			<table class="tab">
+				<tr>
+					<td></td>
+				</tr>
+			</table>
+			<br />
+
+			<span class="label">20. Reprints of 5 Best Research Papers-Attached </span>
+
+			<br />
+			<br />
+
+			<span class="label">21. Check List of the documents attached with the online application </span><br />
+
+			1. PHD Certificate<br />
+			2. PG Certificate<br />
+			3. UG Certificate<br />
+			4. 12th/HSC/Diploma<br />
+			5. 10th/SSC Certificate<br />
+			6. 10 Years Post phd Experience Certificate <br />
+			7. Any other relevant documents ( Experience Certificate, Award Certificate, etc.)
+			<br />
+			<br />
+
+
+			<span class="label">22. Referees</span>
+			<table class="tab">
+				<tr style="background-color:#f1f1f1;">
+					<td colspan="6"><strong class="tr_title">Details of Referees</strong></td>
+				</tr>
+
+				<tr>
+					<!-- <td><strong>S. No.</strong></td> -->
+					<td width="20%"><strong>Name</strong></td>
+					<td width="20%"><strong>Position</strong></td>
+					<td width="15%"><strong>Association with Referee</strong></td>
+					<td width="15%"><strong>Institution/<br />Organization</strong></td>
+					<td width="15%"><strong>E-mail</strong></td>
+					<td width="15%"><strong>Contact No.</strong></td>
+				</tr>
+				<tr>
+					<!-- <td></td> -->
+					<td>Amit Sharma</td>
+					<td>Assistant Professor</td>
+					<td>Research Collaborator</td>
+					<td>Indian Institute of Technology</td>
+					<td>amit.sharma@example.com</td>
+					<td>987-654-3210</td>
+				</tr>
+				<tr>
+					<!-- <td></td> -->
+					<td>Rajesh Patel</td>
+					<td>Associate Professor</td>
+					<td>Thesis Supervisor</td>
+					<td>Indian Institute of Management</td>
+					<td>rajesh.patel@example.com</td>
+					<td>123-456-7890</td>
+				</tr>
+				<tr>
+					<!-- <td></td> -->
+					<td>Deepika Singh</td>
+					<td>Research Scientist</td>
+					<td>Thesis Supervisor</td>
+					<td>Indian Council of Agricultural Research</td>
+					<td>deepika.singh@example.com</td>
+					<td>789-456-1230</td>
+				</tr>
+				
+			</table>
+			<br />
+			<br>
+
+
+
+
+			<span class="label">23. Final Declaration</span>
+
+			<table class="tab">
+
+				<td> I hereby declare that I have carefully read and understood the instructions and particulars
+					mentioned in the advertisment and this application form. I further declare that all the entries
+					along with the attachments uploaded in this form are true to the best of my knowledge and belief
+				</td>
+			</table>
+			<br />
+
+			
+			Signature of Applicant
+			<br>
+			{{name}}
+			<br>
+			<br>
+			
+
+		</div>
+
+
+		
+	</div>
+
+
+</body>
+
+</html>
